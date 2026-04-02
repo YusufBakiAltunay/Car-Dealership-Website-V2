@@ -1,0 +1,36 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\User;
+
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     */
+    public function run(): void
+    {
+        $this->call([
+            RoleAndPermissionSeeder::class,
+            UserSeeder::class,
+
+            BrandSeeder::class,
+            FuelTypeSeeder::class,
+
+            CarModelSeeder::class,
+            CarSeeder::class,
+
+            PriceCarSeeder::class,
+            ProductSeeder::class,
+
+            PriceProductSeeder::class,
+
+            GarageServiceSeeder::class,
+            PriceServiceSeeder::class,
+        ]);
+    }
+}
